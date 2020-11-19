@@ -21,6 +21,12 @@ $("#buttonMain").click(function()
     let teamName = $("#teamName").val() 
     $("#teamName").val("")
     $("#titleOfTeamName").empty().append(`<div> ${teamName} </div>`)
+    let percent = Math.floor((maneger.gitPerscent())*100)
+    if (percent!= 100)
+    {
+        $("#titleOfTeamName").append(`<div> warning you loaded just ${percent}% </div>`)
+    }
+    
     rendererObj.render(filterTeam.filter(maneger.gitData() ,teamName ))
 
 })

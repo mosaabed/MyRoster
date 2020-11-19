@@ -16,7 +16,9 @@
 
     <script id="player-template" type="text/x-handlebars-template">
         <ul>
+            
             {{#each this}}
+                <img src={{photo}} >
                 <li>{{firstName}} {{lastName}} </li>
                 <li>{{jersey}} {{pos}} </li>
             {{/each}}
