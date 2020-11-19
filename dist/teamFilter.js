@@ -12,11 +12,14 @@ class teamFilter{
             return [];
         }
 
-        for (let player of data)
+        for (let leag in data)
         {
-            if (player.teamId == teamId)
+            for(let player of data[leag])
             {
-                this.tempFilterdData.push(player)
+                if (player.teamId == teamId)
+                {
+                    this.tempFilterdData.push(player)
+                }
             }
         }
         return this.tempFilterdData

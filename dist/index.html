@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    
+
     <input type="text" id = "teamName">
     <button id = "buttonMain">Get Roster</button>
     <div id = "titleOfTeamName"></div>
@@ -16,9 +16,8 @@
 
     <script id="player-template" type="text/x-handlebars-template">
         <ul>
-            
             {{#each this}}
-                <img src={{photo}} >
+            <img src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" >
                 <li>{{firstName}} {{lastName}} </li>
                 <li>{{jersey}} {{pos}} </li>
             {{/each}}
@@ -34,4 +33,4 @@
     <script src="main.js"></script>
 </body>
 
-</html>
+</html> 
